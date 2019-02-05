@@ -7,6 +7,6 @@ Execute the following commands to start consumer
 ```
 $ mix deps.get
 $ mix compile
-$ mix run -e "Db.init"
+$ mix run -e "MessageProjector.Persistence.Db.init"
 $ iex -S mix
 ```
