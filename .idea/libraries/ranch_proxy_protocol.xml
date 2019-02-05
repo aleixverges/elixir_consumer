@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ranch_proxy_protocol" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ranch_proxy_protocol/ebin" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ranch_proxy_protocol/src" />
+    </SOURCES>
+  </library>
+</component>
