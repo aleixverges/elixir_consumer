@@ -1,0 +1,19 @@
+version: '3.5'
+
+networks:
+  rabbitmq:
+    external: true
+  dead_reader:
+
+services:
+  elixir:
+    build:
+      context: .
+      dockerfile: docker/elixir/Dockerfile
+    networks:
+      - rabbitmq
+      - dead_reader
+    volumes:
+      - ./src:/opt/app
+    environment:
+      - MIX_ENV=dev

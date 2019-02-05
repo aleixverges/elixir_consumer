@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="amqp" type="mix">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/_build/dev/lib/amqp/ebin" />
+      <root url="file://$PROJECT_DIR$/src/_build/dev/lib/amqp/ebin" />
     </CLASSES>
     <SOURCES>
-      <root url="file://$PROJECT_DIR$/deps/amqp/lib" />
+      <root url="file://$PROJECT_DIR$/src/deps/amqp/lib" />
     </SOURCES>
   </library>
 </component>

@@ -1,21 +1,17 @@
-# MessageProjector
+# Elixir Consumer
+Elixir consumer to read and persist messages from RabbitMQ. Messages are consumed and persisted in different processes. It requires an external 'rabbitmq' network where a RabbitMQ instance exists.
 
-**TODO: Add description**
+# Application up and running
+Execute the following commands to start consumer
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `message_projector` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:message_projector, "~> 0.1.0"}
-  ]
-end
 ```
+docker-compose up -d
+docker exec -it [elixir_container] bash
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/message_projector](https://hexdocs.pm/message_projector).
+/opt/app# mix deps.get
+/opt/app# mix compile
+/opt/app# mix run -e "Db.init"
+/opt/app# iex -S mix
 
+iex(1)> Consumer.start("dead_final")
+```
