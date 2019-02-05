@@ -29,3 +29,5 @@ message_projector-*.tar
 log/
 
 .idea/
+
+_build
