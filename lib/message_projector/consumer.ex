@@ -72,6 +72,7 @@ defmodule MessageProjector.Consumer do
 
   defp consume(channel, tag, redelivered, payload) do
     MessageProjector.Handler.handle(payload)
+    :ok = Basic.ack channel, tag
 
   rescue
     # Requeue unless it's a redelivered message.

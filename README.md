@@ -5,13 +5,8 @@ Elixir consumer to read and persist messages from RabbitMQ. Messages are consume
 Execute the following commands to start consumer
 
 ```
-docker-compose up -d
-docker exec -it [elixir_container] bash
-
-/opt/app# mix deps.get
-/opt/app# mix compile
-/opt/app# mix run -e "Db.init"
-/opt/app# iex -S mix
-
-iex(1)> Consumer.start("dead_final")
+$ mix deps.get
+$ mix compile
+$ mix run -e "Db.init"
+$ iex -S mix
 ```
