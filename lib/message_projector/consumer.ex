@@ -6,9 +6,7 @@ defmodule MessageProjector.Consumer do
   @username Application.get_env(:message_projector, :username)
   @password Application.get_env(:message_projector, :password)
   @virtual_host Application.get_env(:message_projector, :virtual_host)
-  @exchange    "dead-letters"
-  @queue       "dead_final"
-  @queue_error "#{@queue}_error"
+  @queue       Application.get_env(:message_projector, :queue)
 
   def start_link(_) do
     GenServer.start_link(__MODULE__, [], [])

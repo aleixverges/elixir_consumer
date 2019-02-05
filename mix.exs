@@ -16,7 +16,7 @@ defmodule MessageProjector.MixProject do
     [
       applications: [:amqp, :memento],
       extra_applications: [:logger],
-      mod: {MessageProjector, [queue: :dead_final]}
+      mod: { MessageProjector, [] }
     ]
   end
 

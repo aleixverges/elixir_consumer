@@ -6,7 +6,8 @@ config :message_projector,
   host: "rabbitmq_production",
   username: "admin",
   password: "admin",
-  virtual_host: "invoicesharing"
+  virtual_host: "invoicesharing",
+  queue: "dead_final"
 
 config :mnesia,
   dir: '.mnesia/#{Mix.env}/#{node()}'
